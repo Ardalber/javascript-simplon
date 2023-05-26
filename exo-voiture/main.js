@@ -39,20 +39,18 @@ function stopCar() {
     }
 };
 
-startCar();
-stopCar();
 // faire une fonction qui augmente la vitesse
 
 function increaseSpeed() {
     if ((engineState == true) && (speed < 220)) {
         speed += 10
+        setInterval(increaseDistance(), 1000);
 
     };
     document.getElementById('carspeed').innerHTML = `${speed}  KM/H`;
 
 };
 
-increaseSpeed();
 
 
 // faire une fonction qui diminue la vitesse
@@ -67,14 +65,24 @@ function decreaseSpeed() {
     }
 }
 
-decreaseSpeed();
+
 // faire une fonction qui calcule le niveau de carburant en fonction de la distance parcourue sur la base d'une consommation de 6L/100km
 
-function ckeckFuelLevel() {
+function increaseDistance() {
+
+    if ((engineState == true) && (speed !== 0)) {
+        console.log('ok');
+
+        distance += 10;
+
+        document.getElementById('distance').innerHTML = `${distance}` + 'AL'
+
+    };
+};
+
+setInterval(increaseDistance, 1000);
 
 
-
-}
 
 
 // [Boutons]
