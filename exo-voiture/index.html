@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EXO-VOITURE</title>
+</head>
+
+<body>
+    <div>
+        <h2><strong>tableau de bord</strong></h2>
+
+
+        <p>ETAT VOITURE :<span id="enginestate">éteinte</span></p>
+        <p>VITESSE DE LA VOITURE : <span id="carspeed"> 0 KM/H</span></p>
+        <p>RÉGIME DE LA VOITURE : <span id="enginestatespeed">0 KM/H</span></p>
+        <p>NIVEAU DE CARBURANT : <span id="fuellevel"> 50 L</span></p>
+
+
+
+
+        <button class="button" onclick= startCar() >DEMARRAGE</button>
+        <button class="button" onclick= stopCar() >ARRET</button>
+        <button  class="button" onclick= increaseSpeed()>ACCÉLÉRER</button>
+        <button  class="button" onclick=decreaseSpeed()>RALENTIR</button>
+
+        <button  class="button" onclick="">REGIME</button>
+        <button  class="button" onclick="">ESSENCE</button>
+
+
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
