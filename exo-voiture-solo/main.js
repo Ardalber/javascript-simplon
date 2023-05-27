@@ -1,3 +1,60 @@
+let title = document.createElement("h1");
+title.id = "title";
+title.textContent = "k2000";
+
+let parent = document.getElementById("body");
+parent.appendChild(title);
+
+title.style.backgroundColor = "red";
+title.style.textAlign = "center";
+
+let accelScr = document.createElement("button");
+accelScr.className = "butt";
+accelScr.textContent = "empty";
+
+let box = document.createElement("div");
+box.style.backgroundColor = "green";
+box.style.height = "300px";
+body.appendChild(box);
+
+let smallBox1 = document.createElement("div");
+let smallBox2 = document.createElement("div");
+let smallBox3 = document.createElement("div");
+let smallBox4 = document.createElement("div");
+let smallBox5 = document.createElement("div");
+
+smallBox1.style.backgroundColor = "blue";
+smallBox1.style.height = "70px";
+smallBox1.style.width = "70px";
+
+smallBox2.style.backgroundColor = "yellow";
+smallBox2.style.height = "70px";
+smallBox2.style.width = "70px";
+
+smallBox3.style.backgroundColor = "purple";
+smallBox3.style.height = "70px";
+smallBox3.style.width = "70px";
+
+smallBox4.style.backgroundColor = "pink";
+smallBox4.style.height = "70px";
+smallBox4.style.width = "70px";
+
+smallBox5.style.backgroundColor = "pink";
+smallBox5.style.height = "70px";
+smallBox5.style.width = "70px";
+
+box.appendChild(smallBox1);
+box.appendChild(smallBox2);
+box.appendChild(smallBox3);
+box.appendChild(smallBox4);
+box.appendChild(smallBox5);
+
+box.style.flexWrap = "wrap";
+// let button = document.createElement("button");
+// button.textContent = "accelerer";
+// button.className = "bouton";
+// body.appendChild(button);
+
 // Tableau de bord de voiture
 
 // [Variables]
