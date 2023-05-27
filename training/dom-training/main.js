@@ -18,40 +18,33 @@ let parentElement = document.getElementById("container");
 
 parentElement.appendChild(nouvelElement);
 
-
 // SELECTION DE L'ELEMENT A STYLISER
 
-var element = document.getElementById('monElement');
+var element = document.getElementById("monElement");
 
-// STYLISER L'ELEMENT 
+// STYLISER L'ELEMENT
 
-element.style.backgroundColor = 'green';
-element.style.color = 'white';
-element.style.fontSize = '20px';
-element.style.margin = '20px';
+element.style.backgroundColor = "green";
+element.style.color = "white";
+element.style.fontSize = "20px";
+element.style.margin = "20px";
 
-
-
-let secondElement = document.createElement('div');
-secondElement.id = 'second';
-secondElement.textContent = "je viens de créer mon deuxieme élément !!"
-secondElement.style.margin = '20px';
+let secondElement = document.createElement("div");
+secondElement.id = "second";
+secondElement.textContent = "je viens de créer mon deuxieme élément !!";
+secondElement.style.margin = "20px";
 parentElement.appendChild(secondElement);
 
-secondElement.style.backgroundColor = 'pink';
-secondElement.style.color = 'blue';
-secondElement.style.fontSize = '25px';
+secondElement.style.backgroundColor = "pink";
+secondElement.style.color = "blue";
+secondElement.style.fontSize = "25px";
 
-
-let tableau = [0, 1, 2, 3, 4, 5, 6];
+let tableau = [1, 2, 3, 4];
 
 for (let index = 0; index < tableau.length; index++) {
-var thirdElement = document.createElement('div');
-thirdElement.style.color = 'yellow ';
-thirdElement.textContent = 'bien joué';
-thirdElement.style.margin = '10px';
-parentElement.appendChild(thirdElement);
-
+  var thirdElement = document.createElement("div");
+  thirdElement.style.color = "black ";
+  thirdElement.textContent = "bien joué";
+  thirdElement.style.margin = "10px";
+  parentElement.appendChild(thirdElement);
 }
-
-tableau.pop()
