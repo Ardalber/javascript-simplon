@@ -10,10 +10,7 @@ nouvelElement.id = "monElement";
 
 nouvelElement.textContent = "Contenu de mon élément";
 
-
-// AJOUT DE L'ELEMENT AU PARENT
-
-    //CREATION DU PARENT
+//CREATION DU PARENT
 
 let parentElement = document.getElementById("container");
 
@@ -31,6 +28,30 @@ var element = document.getElementById('monElement');
 element.style.backgroundColor = 'green';
 element.style.color = 'white';
 element.style.fontSize = '20px';
+element.style.margin = '20px';
 
 
 
+let secondElement = document.createElement('div');
+secondElement.id = 'second';
+secondElement.textContent = "je viens de créer mon deuxieme élément !!"
+secondElement.style.margin = '20px';
+parentElement.appendChild(secondElement);
+
+secondElement.style.backgroundColor = 'pink';
+secondElement.style.color = 'blue';
+secondElement.style.fontSize = '25px';
+
+
+let tableau = [0, 1, 2, 3, 4, 5, 6];
+
+for (let index = 0; index < tableau.length; index++) {
+var thirdElement = document.createElement('div');
+thirdElement.style.color = 'yellow ';
+thirdElement.textContent = 'bien joué';
+thirdElement.style.margin = '10px';
+parentElement.appendChild(thirdElement);
+
+}
+
+tableau.pop()
