@@ -130,28 +130,30 @@
 // Exercice : Affichage des éléments d'un tableau
 
 // Déclarez un tableau "noms" contenant quelques noms de votre choix
-arrayName = ["pier", "pol", "jak"];
-// Utilisez la méthode forEach() pour parcourir tous les éléments du tableau
-// À chaque itération, affichez l'élément courant à l'aide de console.log()
-arrayName.forEach((element) => {
-  console.log("salut " + element);
-});
-// Testez votre code en modifiant les éléments du tableau "noms" pour observer les résultats.
+// arrayName = ["pier", "pol", "jak"];
+// // Utilisez la méthode forEach() pour parcourir tous les éléments du tableau
+// // À chaque itération, affichez l'élément courant à l'aide de console.log()
+// arrayName.forEach((element) => {
+//   console.log("salut " + element);
+// });
+// // Testez votre code en modifiant les éléments du tableau "noms" pour observer les résultats.
 
-// ----------------------------------------------
-// ----------------------------------------------
-// ----------------------------------------------
+// // ----------------------------------------------
+// // ----------------------------------------------
+// // ----------------------------------------------
 
-// Exercice : Compteur décroissant
+// // Exercice : Compteur décroissant
 
-// Déclarez une variable "compteur" et assignez-lui une valeur numérique de votre choix
-let compteur = 10;
-// Utilisez une boucle while pour afficher les nombres de "compteur" jusqu'à 0
+// // Déclarez une variable "compteur" et assignez-lui une valeur numérique de votre choix
+// let compteur = 10;
+// // Utilisez une boucle while pour afficher les nombres de "compteur" jusqu'à 0
 
-while (compteur > 0) {
-  console.log((compteur -= 1));
-}
+// while (compteur > 0) {
+//   console.log((compteur -= 1));
+// }
 
 // À chaque itération, décrémentez la valeur de "compteur" de 1
 
 // Testez votre code en modifiant la valeur de "compteur" pour observer les résultats.
+
+// IF // IF // IF // IF // IF // IF // IF // IF // IF // IF // IF // IF
