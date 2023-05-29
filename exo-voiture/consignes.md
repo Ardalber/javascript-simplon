@@ -20,13 +20,6 @@ faire un bouton pour ralentir la voiture
 faire un bouton pour arrêter la voiture
 
 
-function stopCar() {
-    if (engineState == false) {
-        document.getElementById('enginestate').innerHTML = 'moteur allumé'
-    } else
-        document.getElementById('enginestate').innerHTML = 'moteur éteint'
-
-}
 
 Enoncé Tableau de bord de voiture
 
@@ -216,3 +209,4 @@ function periodicFunction() {
   display();
 }
 
+speed * (4500 / 220) + 1000

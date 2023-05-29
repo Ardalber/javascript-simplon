@@ -9,24 +9,24 @@
 let engineStatus = false
 let speed = 0
 let distance = 0
+let fuelLevel = 50
+let engineSpeed = 0
 
 function startCar () {
   engineStatus = true
   document.getElementById('engine').textContent = 'ON'
-  console.log('voiture démarrée')
+  setEngineSpeed()
 }
 
 function stopCar () {
   engineStatus = false
   document.getElementById('engine').textContent = 'OFF'
-  console.log('voiture arrêtée')
 }
 
 function increaseSpeed () {
   if (engineStatus === true && speed <= 210) {
     speed += 10
-    document.getElementById('speed').textContent = `${speed}`
-    // console.log(`${speed}`)
+    document.getElementById('speed').textContent = `${speed}` + ' KM/H'
   }
 }
 
@@ -34,18 +34,36 @@ function decreaseSpeed () {
   if (speed >= 10) {
     speed -= 10
     document.getElementById('speed').textContent = `${speed}`
-    // console.log(`${speed}`)
   }
 }
 
 function calcDistance () {
-  if (speed < 10 && engineStatus == true) {
+  if (speed > 0 && engineStatus == true) {
     distance += 10
-    document.getElementById('long').textContent = `${distance}`
+    document.getElementById('long').textContent = `${distance}` + ' KM'
+    setFuel()
   }
 }
 setInterval(calcDistance, 1000)
 
+function setFuel () {
+  if (distance > 0 && fuelLevel > 0) {
+    fuelLevel -= speed * (6 / 100)
+    document.getElementById('fuellevel').textContent =
+      Math.round(fuelLevel * 100) / 100 + ' L'
+  }
+}
+
+// AFAIRE// AFAIRE// AFAIRE// AFAIRE// AFAIRE// AFAIRE
+
+// function setEngineSpeed () {
+//   if (speed > 0 && engineStatus === true) {
+//     engineSpeed = Math.round(speed * (4500 / 220) + 1000)
+//     document.getElementById('enginespeed').textContent =
+//       `${engineSpeed}` + ' TR/MN'
+//     console.log(engineSpeed)
+//   }
+// }
 // Appel de la fonction toutes les 1 secondes
 // [Fonctions]
 // faire une fonction qui démarre la voiture
