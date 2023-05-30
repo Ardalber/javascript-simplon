@@ -3,7 +3,7 @@ document.getElementById('contact').style.backgroundColor = 'green'
 
 let engineStatus = false
 let speed = 0
-let tank = 250
+let tank = 50
 let distance = 0
 let engineSpeed = 0
 
@@ -24,7 +24,6 @@ function startAndStop () {
 function increaseSpeed () {
   if (engineStatus === true && speed <= 210) {
     speed += 10
-    kmhToRpm()
     document.getElementById('speed').textContent = `${speed}` + ' KM/H '
     setDistance()
   }
