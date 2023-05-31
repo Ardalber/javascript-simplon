@@ -1,10 +1,6 @@
 "use strict";
+let age = prompt("quel est ton age");
 
-let admin;
+let ajout = prompt("combien j'ajoute a mon age");
 
-let name;
-
-name = "john";
-admin = name;
-
-alert(admin);
+resultat = alert((age += ajout));
