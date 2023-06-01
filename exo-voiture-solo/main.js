@@ -27,7 +27,7 @@ function increaseSpeed() {
   if (engineStatus === true && speed <= 210) {
     speed += 10;
     document.getElementById("speed").textContent = `${speed}` + " KM/H ";
-    setRoundPerMinuteAscendant();
+    setRoundPerMinute();
     setDistance();
   }
 }
@@ -48,14 +48,12 @@ function setDistance() {
 
 setInterval(setDistance, 1000);
 
-function setRoundPerMinuteAscendant(speed) {
-  if (engineStatus === true && speed > 0) {
-    speed = Math.round(speed * (4500 / 220) + 1000);
-    return speed;
-  }
-}
 // roundPerMinute += Math.round(speed * (2 / 5) + 111000);
 // document.getElementById("enginespeed").textContent =
 //   `${roundPerMinute}` + " TR/MN";
+function kmhToRpm(speed) {
+  speed = Math.round(speed * (4500 / 220) + 1000);
+  return speed;
+}
 
-console.log(roundPerMinute);
+console.log(speed);
