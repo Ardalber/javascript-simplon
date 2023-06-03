@@ -1,3 +1,5 @@
+"use strict";
+
 // // Écris un programme qui demande à l'utilisateur d'entrer un nombre et affiche "Le nombre est positif" s'il est supérieur à zéro.
 
 // let number = prompt("entre un nombre");
@@ -77,13 +79,53 @@
 // }
 // Écris un programme qui demande à l'utilisateur d'entrer des nombres positifs et les ajoute tous jusqu'à ce que l'utilisateur entre un nombre négatif. Une fois que l'utilisateur entre un nombre négatif, le programme devrait afficher la somme des nombres positifs entrés.
 
-let askNumber = prompt("entre un nombre positif");
-let askAnotherNumber = prompt("entre un autre nombre positif");
-while (askNumber > 0) {
-  let result = askNumber + askAnotherNumber;
-  console.log(result);
+// let sum = 0;
+// let input = 0;
+
+// while (input >= 0) {
+//   input = parseInt(
+//     prompt("Entrez un nombre positif (ou un nombre négatif pour arrêter) :")
+//   );
+
+//   if (input >= 0) {
+//     sum += input;
+//   }
+// }
+// Écris un programme qui affiche tous les nombres pairs de 0 à 20 à l'aide d'une boucle.
+// for (let i = 0; i <= 20; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+//
+
+// Écris un programme qui demande à l'utilisateur d'entrer un mot et compte le nombre de voyelles présentes dans ce mot à l'aide d'une boucle.
+// let word = prompt("Entrez un mot :");
+// let vowelCount = 0;
+
+// for (let i = 0; i < word.length; i++) {
+//   let currentChar = word[i].toLowerCase();
+
+//   if (
+//     currentChar === "a" ||
+//     currentChar === "e" ||
+//     currentChar === "i" ||
+//     currentChar === "o" ||
+//     currentChar === "u"
+//   ) {
+//     vowelCount++;
+//   }
+// }
+
+// console.log("Le nombre de voyelles dans le mot", word, "est :", vowelCount);
+
+// Écris un programme qui demande à l'utilisateur d'entrer un nombre et vérifie s'il s'agit d'un nombre premier à l'aide d'une boucle.
+
+for (let i = 0; i < 100; i++) {
+  if (i % 1 === 0 && i % i === 0) {
+    console.log(i + "est un nombre premier");
+  }
 }
 
-// Écris un programme qui affiche les premiers 10 termes de la séquence de Fibonacci en utilisant une boucle while.
+// Écris un programme qui demande à l'utilisateur d'entrer une phrase et affiche le nombre de mots présents dans cette phrase à l'aide d'une boucle.
 
-// Écris un programme qui génère un nombre aléatoire entre 1 et 100, puis demande à l'utilisateur de deviner ce nombre. Le programme devrait indiquer si la devinette est trop élevée, trop basse ou correcte. Le jeu devrait continuer jusqu'à ce que l'utilisateur devine le bon nombre.
+// Écris un programme qui affiche les chiffres de 1 à 5, puis de 4 à 1, en utilisant une seule boucle.
