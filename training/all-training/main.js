@@ -1,15 +1,26 @@
 "use strict";
 
-let box = document.createElement("div");
-box.style.backgroundColor = "green";
-box.style.width = "100px";
-box.style.textAlign = "center";
-let parentElement = document.getElementById("body");
-box.textContent = "box de ouf";
-parentElement.appendChild(box);
+// let a = prompt('nombre stp');
+// let b = prompt('nombre2 stp');
+
+// // déclaration de fonction
+
+// function addition (a,b){
+//     return a += b;
+// };
+
+// console.log(addition(12,34));
+
+// function expression
+
+
+// let addition = function(a,b){
+
+//    return a += b;
+// };
+
+// console.log(addition(23,45));
 
 
 
-let sum  = (a,b) => a*b
 
-alert(sum(12,34));
