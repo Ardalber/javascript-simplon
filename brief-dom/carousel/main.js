@@ -1,3 +1,5 @@
+'use strict'
+
 // CREATION DU PARENT GENERAL (BODY)
 
 let parent = document.getElementById("body");
@@ -12,16 +14,29 @@ divButton.style.marginTop = "30px";
 
 parent.appendChild(divButton);
 
-// CREATION DU BOUTON
+// CREATION DU BOUTON SUIVANT
 
-let button = document.createElement("button");
-button.textContent = "SUIVANTE";
-button.style.margin = "0 0 30px 0";
+let buttonNext = document.createElement("button");
+buttonNext.textContent = "SUIVANTE";
+buttonNext.style.margin = "0 0 30px 0";
+buttonNext.style.width = "100px";
 
-// AJOUT DU BOUTON A LA DIVBUTTON
+// AJOUT DU BOUTON SUIVANT A LA DIVBUTTON
 
-divButton.appendChild(button);
 divButton.style.textAlign = "center";
+
+// creation du bouton précédent
+
+let buttonPrev = document.createElement("button");
+buttonPrev.textContent = "PRECEDENTE";
+buttonPrev.style.margin = "0 30px 30px 0";
+
+
+
+// ajout du bouton précédent
+
+divButton.appendChild(buttonPrev);
+divButton.appendChild(buttonNext);
 
 // CREATION DE LA DIVIMAGE
 
@@ -29,57 +44,60 @@ let divImage = document.createElement("div");
 divImage.style.textAlign = "center";
 body.appendChild(divImage) ;
 
-
-// creation de avengers
-
-let avengers = document.createElement("img");
-avengers.id = "avengers";
-avengers.src = "image-carousel/avengers.jpeg";
-avengers.style.border = "1px solid black";
-avengers.style.padding = "20px";
-avengers.style.borderRadius = "15px";
-
-//  creation de thor
-let thor = document.createElement("img");
-thor.id = "thor";
-thor.src = "image-carousel/thor.jpeg"
-thor.style.border = "1px solid black";
-thor.style.padding = "20px";
-thor.style.borderRadius = "15px";
-
-// creation de hulk
-
-let hulk = document.createElement("img");
-hulk.id = "hulk";
-hulk.src = "image-carousel/hulk.jpeg";
-
-hulk.style.border = "1px solid black";
-hulk.style.padding = "20px";
-hulk.style.borderRadius = "15px";
-
-// creation de blackWidow
-let blackWidow = document.createElement("img");
-blackWidow.id = "blackwidow";
-blackWidow.style.border = "1px solid black";
-blackWidow.style.padding = "20px";
-blackWidow.style.borderRadius = "15px";
+let arrayOfSrc = ["image-carousel/avengers.jpeg","image-carousel/black-widow.jpeg","image-carousel/captain.jpeg","image-carousel/hulk.jpeg","image-carousel/iron-man.jpeg","image-carousel/thor.jpeg"]
 
 
-
-divImage.appendChild(avengers);
-
-console.log(avengers.id);
-avengers.setAttribute("id", 'hulk');
+// creation de l'image
 
 
-button.addEventListener('click', () => {
-    if (avengers.id = "avengers"){
-        divImage.removeChild(avengers)
-        divImage.appendChild(hulk)
-    }
-    else if (hulk.id = "hulk"){
-        divImage.removeChild(hulk)
-        divImage.appendChild(thor)
+let firstImage = document.createElement("img");
+firstImage.src = "image-carousel/avengers.jpeg";
+divImage.appendChild(firstImage);
 
-    }
-});
+
+// ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL
+let valueN = 1;
+function next(){
+        firstImage.src = arrayOfSrc[valueN];              
+        valueN ++ ;
+                if (valueN < arrayOfSrc.length){
+
+                }
+                else valueN = 0;
+ 
+}
+
+
+function prev(){
+        firstImage.src = arrayOfSrc[valueN];              
+        valueN -- ;
+                if (valueN > 0){
+console.log(valueN)
+                }
+                else valueN = 5;
+ 
+}
+
+
+buttonNext.addEventListener("click", next);
+buttonPrev.addEventListener("click",prev);
+
+        
+        
+       
+
+    
+   
+    
+  
+
+
+
+
+      
+
+
+
+ 
+    
+
