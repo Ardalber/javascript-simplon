@@ -72,7 +72,7 @@ function prev(){
         firstImage.src = arrayOfSrc[valueN];              
         valueN -- ;
                 if (valueN > 0){
-console.log(valueN)
+
                 }
                 else valueN = 5;
  
