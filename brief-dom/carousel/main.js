@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 // CREATION DU PARENT GENERAL (BODY)
 
@@ -31,8 +31,6 @@ let buttonPrev = document.createElement("button");
 buttonPrev.textContent = "PRECEDENTE";
 buttonPrev.style.margin = "0 30px 30px 0";
 
-
-
 // ajout du bouton précédent
 
 divButton.appendChild(buttonPrev);
@@ -42,62 +40,38 @@ divButton.appendChild(buttonNext);
 
 let divImage = document.createElement("div");
 divImage.style.textAlign = "center";
-body.appendChild(divImage) ;
+body.appendChild(divImage);
 
-let arrayOfSrc = ["image-carousel/avengers.jpeg","image-carousel/black-widow.jpeg","image-carousel/captain.jpeg","image-carousel/hulk.jpeg","image-carousel/iron-man.jpeg","image-carousel/thor.jpeg"]
-
+let arrayOfSrc = [
+  "image-carousel/avengers.jpeg",
+  "image-carousel/black-widow.jpeg",
+  "image-carousel/captain.jpeg",
+  "image-carousel/hulk.jpeg",
+  "image-carousel/iron-man.jpeg",
+  "image-carousel/thor.jpeg",
+];
 
 // creation de l'image
-
 
 let firstImage = document.createElement("img");
 firstImage.src = "image-carousel/avengers.jpeg";
 divImage.appendChild(firstImage);
 
-
 // ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL
 let valueN = 1;
-function next(){
-        firstImage.src = arrayOfSrc[valueN];              
-        valueN ++ ;
-                if (valueN < arrayOfSrc.length){
-
-                }
-                else valueN = 0;
- 
+function next() {
+  firstImage.src = arrayOfSrc[valueN];
+  valueN++;
+  if (valueN < arrayOfSrc.length) {
+  } else valueN = 0;
 }
 
-
-function prev(){
-        firstImage.src = arrayOfSrc[valueN];              
-        valueN -- ;
-                if (valueN > 0){
-
-                }
-                else valueN = 5;
- 
+function prev() {
+  firstImage.src = arrayOfSrc[valueN];
+  valueN--;
+  if (valueN > 0) {
+  } else valueN = 5;
 }
-
 
 buttonNext.addEventListener("click", next);
-buttonPrev.addEventListener("click",prev);
-
-        
-        
-       
-
-    
-   
-    
-  
-
-
-
-
-      
-
-
-
- 
-    
-
+buttonPrev.addEventListener("click", prev);
