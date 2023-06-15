@@ -4,3 +4,4 @@ Score Keeper Vous devrez créer une page web contenant un petit formulaire de sc
 Un score en cours affiché * Un score maximal à atteindre * Trois boutons : Player 1, Player 2 et Reset * Optionnel : une mise en forme améliorée / SASS
 
 Ci-dessous la vidéo d’une version basique : https://youtu.be/ew9wcJF7_OU
+
