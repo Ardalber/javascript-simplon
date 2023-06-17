@@ -1,26 +1,13 @@
-"use strict";
+'use strict'
 
-// let a = prompt('nombre stp');
-// let b = prompt('nombre2 stp');
+let words = "salut les gens";
 
-// // déclaration de fonction
-
-// function addition (a,b){
-//     return a += b;
-// };
-
-// console.log(addition(12,34));
-
-// function expression
+function stringToArray(words) {
+   words = words.trim();
+   let result = words.split(" ");
+   console.log(result);
+   return result;
+}
 
 
-// let addition = function(a,b){
-
-//    return a += b;
-// };
-
-// console.log(addition(23,45));
-
-
-
-
+stringToArray( words);
