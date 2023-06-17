@@ -1,42 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>K2000</title>
 </head>
-
-<body id="body">
-
-    <p>Moteur :<span id="engine"> Waiting...</span> </p>
-    <p>Vitesse :<span id="speed"> 0 KM/H</span></p>
-    <p>Vitesse du moteur : <span id="enginespeed"> 0 TR/MN</span></p>
-    <p>réservoir : <span id="tank">0 L</span></p>
-    <p>Distance : <span id="distance" > 0 KM</span> </p>
+<body>
 
 
-
-        <button id ="contact"onclick="startAndStop()" >START</button>
-        <button onclick="increaseSpeed() ">ACCELERER</button>
-        <button onclick=" decreaseSpeed() ">RALENTIR</button>
-
-
-
-
-
-    
+    <p>moteur : <span id="etat">éteint</span></p>
+    <p>vitesse :  <span id="vitesse">0</span> km/h</p>
+    <p>régime moteur : <span> 0 tr/mn</span></p>
+    <p>réservoir : <span id="reservoir"></span> l </p>
+    <p>distance : <span id="distance">0</span> km</p>
+    <p>temps :  <span id="temps">0</span> s</p>
 
 
-
-
-
-
-
-
-
+    <button id="start">démarrer</button>
+    <button id="stop">arrêter</button>
+    <button id="accelerer">accélérer</button>
+    <button id="ralentir">ralentir</button>
     <script src="main.js"></script>
 </body>
-
 </html>

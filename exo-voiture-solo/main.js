@@ -1,59 +1,98 @@
 "use strict";
 
-document.getElementById("contact").style.width = "80px";
-document.getElementById("contact").style.backgroundColor = "green";
+// obtention du bouton start
+let start = document.getElementById('start');
+// ajoute de l'ecouteur d'evenement sur le bouton démarrer
+start.addEventListener('click', demarrer);
 
-let engineStatus = false;
-let speed = 0;
-let tank = 50;
-let distance = 0;
-let roundPerMinute = 0;
+let etat = document.getElementById('etat');
 
-function startAndStop() {
-  if (engineStatus === false) {
-    engineStatus = true;
-    document.getElementById("engine").textContent = " ON";
-    document.getElementById("contact").textContent = "STOP";
-    document.getElementById("contact").style.backgroundColor = "red";
-  } else {
-    engineStatus = false;
-    document.getElementById("engine").textContent = "OFF";
-    document.getElementById("contact").textContent = "START";
-    document.getElementById("contact").style.backgroundColor = "green";
+let stop = document.getElementById('stop');
+stop.addEventListener('click',arreter);
+
+let accelerer = document.getElementById("accelerer");
+accelerer.addEventListener("click", augVitesse);
+
+let compteur = document.getElementById('vitesse');
+
+let ralentir = document.getElementById("ralentir");
+ralentir.addEventListener("click", dimVitesse);
+
+let dist = document.getElementById('distance');
+let tps = document.getElementById('temps');
+
+let reservRestant = document.getElementById('reservoir');
+// [Variables]
+// variable etat_moteur: false = arret / true = démarré
+let moteur = false;
+// variable vitesse : numérique, de 0 à 220 km/h
+let vitesse = 0;
+// variable régime moteur : numérique, de 0 à 5500 tr/min
+let vitesseMoteur = 0; 
+// variable niveau_carburant : numérique, de 0 à 50L
+let reservoir = 250;
+// variable de distance
+let distance = 0; 
+//  variable temps
+let temps = 0;
+
+
+// creation du temps !!!!
+
+
+// [Fonctions]
+// faire une fonction qui démarre la voiture
+function demarrer() {
+  moteur = true;
+  etat.textContent = "allumé";
+  setInterval(increTemps, 1000);
+
+}
+
+function arreter() {
+  if (moteur === true) {
+    moteur = false;
+    etat.textContent = "éteint";
+    clearInterval(incrementInterval);
+    temps = 0;
+    distance = 0;
   }
 }
 
-function increaseSpeed() {
-  if (engineStatus === true && speed <= 210) {
-    speed += 10;
-    document.getElementById("speed").textContent = `${speed}` + " KM/H ";
-    setRoundPerMinute();
-    setDistance();
+// faire une fonction qui augmente la vitesse
+function augVitesse() {
+  if(vitesse <= 210 && moteur === true){
+          vitesse += 10;
+          compteur.textContent = vitesse;
+  }
+}
+// faire une fonction qui diminue la vitesse
+
+function dimVitesse() {
+  if(vitesse >= 10){
+        vitesse -= 10;
+        compteur.textContent = vitesse;
+
   }
 }
 
-function decreaseSpeed() {
-  if (speed >= 10) {
-    speed -= 10;
-    document.getElementById("speed").textContent = `${speed}` + " KM/H ";
+function increTemps() {
+  if (vitesse > 0) {
+    temps += 1;
+    tps.textContent = temps;
+    distance += Math.round((((vitesse * temps) / 3600)/100) * 1000);
+    calculerNiveauCarburant(reservoir);
+    reservRestant.textcontent = reservoir;
+
+
+    dist.textContent = distance;
   }
 }
 
-function setDistance() {
-  if (speed > 0) {
-    distance += 10;
-    document.getElementById("distance").textContent = `${distance}` + " KM  ";
-  }
+// faire une fonction qui calcule le niveau de carburant en fonction de la distance parcourue sur la base d'une consommation de 6L/100km
+function calculerNiveauCarburant(reservoir) {
+  let consommation = (distance / 10) * (6/100);
+  reservoir -= consommation;
+  console.log("conso" + consommation);
+  console.log("reser" + reservoir);
 }
-
-setInterval(setDistance, 1000);
-
-// roundPerMinute += Math.round(speed * (2 / 5) + 111000);
-// document.getElementById("enginespeed").textContent =
-//   `${roundPerMinute}` + " TR/MN";
-function kmhToRpm(speed) {
-  speed = Math.round(speed * (4500 / 220) + 1000);
-  return speed;
-}
-
-console.log(speed);
