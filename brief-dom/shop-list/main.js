@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 //  creation du body
 let body = document.getElementById("body");
@@ -43,8 +43,11 @@ body.appendChild(divList);
 //  ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL ZONE DE TRAVAIL
 let valueId = 0;
 
-function addTodo(event) {
-  event.preventDefault();
+function addTodo() {
+  if(textInput.value.trim()!== ""){
+
+
+  
   valueId++;
   // creation de la div card and trash
   let cardAndTrash = document.createElement("div");
@@ -86,7 +89,7 @@ function addTodo(event) {
 
   textInput.value = "";
 }
-
+}
 buttonAdd.addEventListener("click", addTodo);
 
 function removeTodo(evt) {
