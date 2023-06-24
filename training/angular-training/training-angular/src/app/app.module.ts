@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { IronManComponent } from './iron-man/iron-man.component';
 import { ThorComponent } from './thor/thor.component';
 import { HulkComponent } from './hulk/hulk.component';
+import { SpiderManComponent } from './spider-man/spider-man.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { HulkComponent } from './hulk/hulk.component';
     IronManComponent,
     ThorComponent,
     HulkComponent,
+    SpiderManComponent,
   ],
   imports: [
     BrowserModule
